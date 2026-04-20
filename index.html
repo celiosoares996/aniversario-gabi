@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <title>A Trajetória da Gabi ✨</title>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfcf8;
+            overflow-x: hidden;
+        }
+
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-hand { font-family: 'Dancing Script', cursive; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1.2s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #entry-overlay {
+            position: fixed;
+            inset: 0;
+            background: #fffafb;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 1.2s cubic-bezier(0.7, 0, 0.3, 1);
+        }
+
+        .gift-container {
+            cursor: pointer;
+            animation: giftShake 2s infinite;
+        }
+
+        .gift-container:hover {
+            transform: scale(1.1);
+            animation: none;
+            filter: drop-shadow(0 0 20px rgba(251, 113, 133, 0.4));
+        }
+
+        @keyframes giftShake {
+            0%, 100% { transform: rotate(0deg); }
+            10%, 30%, 50%, 70% { transform: rotate(-5deg); }
+            20%, 40%, 60%, 80% { transform: rotate(5deg); }
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            width: 1px;
+            background: #fda4af;
+            height: 100%;
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 768px) {
+            .timeline-line { left: 20px; }
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('./img/14.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        @media (max-width: 768px) {
+            .hero-bg { background-attachment: scroll; }
+        }
+
+        /* 💖 CORAÇÕES */
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+        }
+
+        .heart {
+            position: absolute;
+            bottom: 0;
+            animation: floatUp 4s linear forwards;
+        }
+    </style>
+</head>
+
+<body class="text-slate-800">
+
+<!-- 💖 CORAÇÕES -->
+<div id="heartsContainer" class="pointer-events-none fixed inset-0 z-40 overflow-hidden"></div>
+
+<!-- 🎁 OVERLAY -->
+<div id="entry-overlay">
+    <div class="text-center px-6">
+        <div class="gift-container mb-6" onclick="openGift()">
+            <i data-lucide="gift" class="w-20 sm:w-24 md:w-28 h-20 sm:h-24 md:h-28 text-rose-400"></i>
+        </div>
+        <h2 class="font-serif text-2xl sm:text-3xl italic text-rose-400">
+            Para: Gabi
+        </h2>
+    </div>
+</div>
+
+<!-- 🌅 HERO -->
+<header class="h-screen flex items-center justify-center text-center hero-bg px-4">
+    <div class="reveal text-white">
+        <h1 class="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-serif mb-4">
+            Gabi<span class="text-rose-400">.</span>
+        </h1>
+
+        <p class="font-hand text-xl sm:text-2xl md:text-3xl text-slate-200">
+            Cada detalhe de uma vida iluminada
+        </p>
+    </div>
+</header>
+
+<!-- 🎵 SPOTIFY -->
+<section class="reveal py-16 px-4 text-center">
+    <h2 class="font-serif text-2xl sm:text-3xl italic text-rose-400 mb-6">
+        Sua música 💖
+    </h2>
+
+    <div class="max-w-xl mx-auto shadow-2xl rounded-xl overflow-hidden">
+        <iframe style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/2o6gscsg0ow9sCIpCEdYyw"
+            width="100%" height="352"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+    </div>
+</section>
+
+<!-- 📸 TIMELINE -->
+<section class="relative py-16 sm:py-24 container mx-auto px-4">
+    <div class="timeline-line"></div>
+    <div id="timeline"></div>
+</section>
+
+<!-- 🎥 VIDEOS -->
+<section class="bg-[#fff9fa] py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+
+        <div class="reveal text-center mb-16">
+            <h2 class="font-serif text-3xl md:text-5xl italic text-rose-400">
+                Vozes do Coração
+            </h2>
+        </div>
+
+        <div id="videos" class="grid grid-cols-1 sm:grid-cols-2 gap-6"></div>
+
+    </div>
+</section>
+
+<!-- ❤️ FINAL -->
+<footer class="py-24 text-center bg-white px-4">
+    <div class="reveal">
+        <h2 class="text-3xl sm:text-5xl font-serif mb-6">
+            Obrigado por ser você
+        </h2>
+
+        <p class="font-hand text-2xl sm:text-3xl text-rose-400 italic">
+            E a história continua...
+        </p>
+    </div>
+</footer>
+
+<script src="./js/script.js"></script>
+
+<script>
+lucide.createIcons();
+
+// 💖 gerar corações
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart text-rose-400";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.innerHTML = "💖";
+
+    document.getElementById("heartsContainer").appendChild(heart);
+
+    setTimeout(() => heart.remove(), 4000);
+}, 500);
+</script>
+
+</body>
+</html>
