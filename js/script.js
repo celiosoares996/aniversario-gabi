@@ -85,6 +85,7 @@ const videos = [
     { src: "./videos/2.mp4", nome: "Laysa" },
     { src: "./videos/3.mp4", nome: "Esposo e filha ❤️" },
     { src: "./videos/4.mp4", nome: "Gabira" },
+    { src: "./videos/11.mp4", nome: "Emily" },
     { src: "./videos/10.mp4", nome: "Momentos 1" },
     { src: "./videos/6.mp4", nome: "Momentos 2" },
     { src: "./videos/7.mp4", nome: "Momentors 3" },
