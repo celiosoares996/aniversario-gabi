@@ -83,7 +83,7 @@ function renderTimeline() {
 const videos = [
     { src: "./videos/1.mp4", nome: "Mãe ❤️" },
     { src: "./videos/2.mp4", nome: "Laysa" },
-    { src: "./videos/3.mp4", nome: "Wender" },
+    { src: "./videos/3.mp4", nome: "Wender e filha ❤️" },
     { src: "./videos/4.mp4", nome: "Gabira" },
     { src: "./videos/10.mp4", nome: "Momentos 1" },
     { src: "./videos/6.mp4", nome: "Momentos 2" },
