@@ -81,16 +81,16 @@ function renderTimeline() {
 // 🎥 VIDEOS
 // =======================
 const videos = [
-    { src: "./videos/1.mp4", nome: "Mãe 💖" },
-    { src: "./videos/2.mp4", nome: "Pai" },
-    { src: "./videos/3.mp4", nome: "Melhor Amiga" },
-    { src: "./videos/4.mp4", nome: "Irmão" },
-    { src: "./videos/5.mp4", nome: "Amigos" },
-    { src: "./videos/6.mp4", nome: "Primos" },
-    { src: "./videos/7.mp4", nome: "Família" },
-    { src: "./videos/8.mp4", nome: "Amiga 2" },
-    { src: "./videos/9.mp4", nome: "Amigo Especial" },
-    { src: "./videos/10.mp4", nome: "Mensagem Final ❤️" }
+    { src: "./videos/1.mp4", nome: "Mãe ❤️" },
+    { src: "./videos/2.mp4", nome: "Laysa" },
+    { src: "./videos/3.mp4", nome: "Wender" },
+    { src: "./videos/4.mp4", nome: "Gabira" },
+    { src: "./videos/10.mp4", nome: "Momentos 1" },
+    { src: "./videos/6.mp4", nome: "Momentos 2" },
+    { src: "./videos/7.mp4", nome: "Momentors 3" },
+    { src: "./videos/8.mp4", nome: "Momentos 4" },
+    { src: "./videos/9.mp4", nome: "Momentos 5" },
+    { src: "./videos/5.mp4", nome: "Momentos 6" }
 ];
 
 function renderVideos() {
