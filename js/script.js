@@ -82,16 +82,16 @@ function renderTimeline() {
 // =======================
 const videos = [
     { src: "./videos/1.mp4", nome: "Mãe ❤️" },
-    { src: "./videos/2.mp4", nome: "Laysa" },
+    { src: "./videos/2.mp4", nome: "Laysa ❤️" },
     { src: "./videos/3.mp4", nome: "Esposo e filha ❤️" },
-    { src: "./videos/4.mp4", nome: "Gabira" },
-    { src: "./videos/11.mp4", nome: "Emily" },
-    { src: "./videos/10.mp4", nome: "Momentos 1" },
-    { src: "./videos/6.mp4", nome: "Momentos 2" },
-    { src: "./videos/7.mp4", nome: "Momentors 3" },
-    { src: "./videos/8.mp4", nome: "Momentos 4" },
-    { src: "./videos/9.mp4", nome: "Momentos 5" },
-    { src: "./videos/5.mp4", nome: "Momentos 6" }
+    { src: "./videos/4.mp4", nome: "Gabira ❤️" },
+    { src: "./videos/11.mp4", nome: "Emily ❤️" },
+    { src: "./videos/10.mp4", nome: "Larissa ❤️" },
+    { src: "./videos/6.mp4", nome: "Momentos 1 🎞️" },
+    { src: "./videos/7.mp4", nome: "Momentors 2 🎞️" },
+    { src: "./videos/8.mp4", nome: "Momentos 3 🎞️" },
+    { src: "./videos/9.mp4", nome: "Momentos 4 🎞️" },
+    { src: "./videos/5.mp4", nome: "Momentos 5 🎞️" }
 ];
 
 function renderVideos() {
