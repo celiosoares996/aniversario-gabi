@@ -87,7 +87,7 @@ const videos = [
     { src: "./videos/4.mp4", nome: "Gabira ❤️" },
     { src: "./videos/11.mp4", nome: "Emily ❤️" },
     { src: "./videos/10.mp4", nome: "Larissa ❤️" },
-    { src: "./videos/6.mp4", nome: "Momentos 1 🎞️" },
+    { src: "./videos/6.mp4", nome: "Isso mostra um pouco sobre você na questão de que na tem tempo ruim o que importa é ver o outro feliz e você faz de tudo pra ver as pessoas ao seu redor feliz… coloca o capacete que lá vem pedrada… kkkk 🎞️" },
     { src: "./videos/7.mp4", nome: "Momentors 2 🎞️" },
     { src: "./videos/8.mp4", nome: "Momentos 3 🎞️" },
     { src: "./videos/9.mp4", nome: "Momentos 4 🎞️" },
